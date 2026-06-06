@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #B8860B; /* Royal Gold */
+  --color-primary-dark: #916A09;
+  --color-primary-light: #DAA520;
+  --color-secondary: #020617; /* Oxford Navy */
+  --color-secondary-light: #0F172A;
+  
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-body bg-[#F1F3F6] text-[#1D1D1D] antialiased text-[13px] leading-tight;
+  }
+}
+
+@layer components {
+  /* Salesforce Style Workspace Panel */
+  .workspace-panel {
+    @apply bg-white border border-[#D8DDE6] shadow-sm;
+  }
+
+  .enterprise-table {
+    @apply w-full text-left border-collapse;
+  }
+
+  .enterprise-table th {
+    @apply bg-[#F3F5F9] text-[#444444] text-[10px] font-bold uppercase tracking-wider px-4 py-3 border-b border-[#D8DDE6];
+  }
+
+  .enterprise-table td {
+    @apply px-4 py-2.5 border-b border-[#F0F0F0] text-[12px] font-medium text-[#16325C];
+  }
+
+  .btn-action {
+    @apply px-4 py-2 rounded border border-[#D8DDE6] bg-white text-[#0070D2] font-bold text-[11px] uppercase tracking-wide hover:bg-[#F3F5F9] transition-all active:scale-95;
+  }
+
+  .btn-primary-fn {
+    @apply px-6 py-2.5 bg-[#0070D2] hover:bg-[#005FB2] text-white font-black text-[11px] uppercase tracking-widest rounded shadow-sm transition-all;
+  }
+
+  .status-badge-fn {
+    @apply px-2 py-0.5 rounded text-[10px] font-bold border;
+  }
+}
+
+/* Custom Scrollbar for High Density */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8DDE6;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8860B;
+}
